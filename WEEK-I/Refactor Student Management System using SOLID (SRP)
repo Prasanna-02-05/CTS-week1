@@ -1,0 +1,28 @@
+class Student:
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+
+    def calculate_grade(self):
+        if self.marks >= 90:
+            return "A"
+        elif self.marks >= 75:
+            return "B"
+        elif self.marks >= 50:
+            return "C"
+        else:
+            return "Fail"
+
+    def save_to_database(self):
+        print(f"{self.name} saved to database.")
+
+    def print_report(self):
+        print("----- Report -----")
+        print("Name:", self.name)
+        print("Marks:", self.marks)
+        print("Grade:", self.calculate_grade())
+
+
+student = Student("Prasanna", 88)
+student.print_report()
+student.save_to_database()
